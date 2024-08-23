@@ -1,4 +1,20 @@
+let clickUpgrades = [
+  {
+    name: 'pickaxe',
+    price: 100,
+    quantity: 0,
+    bonus: 1
+  }
+];
 
+let automaticUpgrades = [
+  {
+    name: 'rover',
+    price: 600,
+    quantity: 0,
+    bonus: 20
+  }
+];
 
 
 let totalCheese = 0
