@@ -77,10 +77,10 @@ function drawClickStats() {
   let clickStatsElm = document.getElementById(`clickStats`)
 
   let totalPickaxeElm = clickStatsElm.querySelector('.totalPickaxe')
-  totalPickaxeElm.innerHTML = `<span>${totalPickaxe} x Pickaxe +${totalClickMiningBonus} per click</span>`
+  totalPickaxeElm.innerHTML = `<span>${totalPickaxe} x Pickaxe +${totalPickaxeMiningBonus}</span>`
 
   let totaljackhammerElm = clickStatsElm.querySelector('.totalJackhammer')
-  totaljackhammerElm.innerHTML = `<span> ${totalPickaxe} x Jackhammer +${totalClickMiningBonus} per click</span>`
+  totaljackhammerElm.innerHTML = `<span> ${totalPickaxe} x Jackhammer +${totalJackhammerMiningBonus}</span>`
 }
 
 
@@ -88,10 +88,10 @@ function drawAutoStats() {
   let autoStatsElm = document.getElementById(`autoStats`)
 
   let totalCheeseMinerElm = autoStatsElm.querySelector('.totalCheeseMiner')
-  totalCheeseMinerElm.innerHTML = `<span>${totalCheeseMiner} x Cheese Miner +${totalAutoMiningBonus} per turn</span>`
+  totalCheeseMinerElm.innerHTML = `<span>${totalCheeseMiner} x Cheese Miner +${totalCheeseMinerMiningBonus}</span>`
 
   let totalCheeseMiningFacilityElm = autoStatsElm.querySelector('.totalCheeseMiningFacility')
-  totalCheeseMiningFacilityElm.innerHTML = `<span> ${totalCheeseMiningFacility} x Cheese Mining Facility +${totalAutoMiningBonus} per turn</span>`
+  totalCheeseMiningFacilityElm.innerHTML = `<span> ${totalCheeseMiningFacility} x Cheese Mining Facility +${totalCheeseMiningFacilityMiningBonus}</span>`
 }
 
 
