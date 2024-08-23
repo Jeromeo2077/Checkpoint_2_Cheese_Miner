@@ -32,6 +32,7 @@ let automaticUpgrade = [
 
 let totalCheese = 0
 let cheesePerClick = 1
+let cheesePerTurn = 0
 
 drawCheeseStats()
 
@@ -52,6 +53,9 @@ function drawCheeseStats() {
 
   let cheesePerClickElm = cheeseElm.querySelector('.cheeseClick')
   cheesePerClickElm.innerHTML = `<span>Cheese per click: ${cheesePerClick}</span>`
+
+  let cheesePerTurnElm = cheeseElm.querySelector('.cheesePerTurn')
+  cheesePerTurnElm.innerHTML = `<span>Cheese per turn: ${cheesePerTurn}</span>`
 }
 
 function reset() {
