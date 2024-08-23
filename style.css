@@ -1,0 +1,12 @@
+  /* Section Selector Styles*/
+
+
+
+  /* Section Class Styles */
+
+  .cheeseMinerBackground {
+    background-image: url(./images/Galaxy_Background.png);
+    min-height: 50vh;
+    background-size: cover;
+    background-position: center;
+  }
