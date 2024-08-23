@@ -66,6 +66,16 @@ function drawCheeseStats() {
   cheesePerTurnElm.innerHTML = `<span>Cheese per turn: ${cheesePerTurn}</span>`
 }
 
+function drawClickStats() {
+  let clickStatsElm = document.getElementById(`clickStats`)
+
+  let totalPickaxeElm = clickStatsElm.querySelector('.totalPickaxe')
+  totalPickaxeElm.innerHTML = `<span>${totalPickaxe} x Pickaxe +${totalClickMiningBonus} per click</span>`
+
+  let totaljackhammerElm = clickStatsElm.querySelector('.totalJackhammer')
+  totaljackhammerElm.innerHTML = `<span> ${totalPickaxe} x Jackhammer +${totalClickMiningBonus} per click</span>`
+}
+
 function reset() {
   totalCheese = 0
   cheesePerClick = 1
