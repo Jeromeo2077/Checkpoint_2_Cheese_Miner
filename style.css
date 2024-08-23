@@ -4,12 +4,22 @@
 
   /* Section Class Styles */
 
+  .centerCardMoonImage {
+    background-image: url(./images/Moon_Background.png);
+    min-height: 50vh;
+    min-width: 50vw;
+    background-size: cover;
+    background-position: center;
+  }
+
+
   .cheeseMinerBackground {
     background-image: url(./images/Galaxy_Background.png);
     min-height: 50vh;
     background-size: cover;
     background-position: center;
   }
+
 
   .matemasie-regular {
     font-family: "Matemasie", sans-serif;
