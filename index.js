@@ -1,26 +1,8 @@
-let clickUpgrades = [
-  {
-    name: 'pickaxe',
-    price: 100,
-    quantity: 0,
-    bonus: 1
-  }
-];
 
-let automaticUpgrades = [
-  {
-    name: 'rover',
-    price: 600,
-    quantity: 0,
-    bonus: 20
-  }
-];
 
 
 let totalCheese = 0
 let cheesePerClick = 1
-
-drawCheeseStats()
 
 
 function mineCheese() {
@@ -39,9 +21,4 @@ function drawCheeseStats() {
   let cheesePerClickElm = cheeseElm.querySelector('.cheeseClick')
   cheesePerClickElm.innerHTML = `<span>Cheese per click: ${cheesePerClick}</span>`
 
-}
-
-reset(){
-  let totalCheese = 0
-  let cheesePerClick = 1
 }
