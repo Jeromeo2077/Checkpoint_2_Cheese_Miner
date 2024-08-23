@@ -1,24 +1,39 @@
-let clickUpgrades = [
+let clickUpgrade = [
   {
-    name: 'pickaxe',
+    name: 'Pickaxe',
     price: 100,
     quantity: 0,
     bonus: 1
+  },
+
+  {
+    name: 'Jackhammer',
+    price: 200,
+    quantity: 0,
+    bonus: 3
   }
 ];
 
-let automaticUpgrades = [
+let automaticUpgrade = [
   {
-    name: 'rover',
-    price: 600,
+    name: 'Cheese Miner',
+    price: 400,
     quantity: 0,
-    bonus: 20
+    bonus: 7
+  },
+  {
+    name: 'Cheese Mining Facility',
+    price: 800,
+    quantity: 0,
+    bonus: 15
   }
 ];
 
 
 let totalCheese = 0
 let cheesePerClick = 1
+
+drawCheeseStats()
 
 
 function mineCheese() {
