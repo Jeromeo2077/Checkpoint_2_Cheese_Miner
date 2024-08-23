@@ -34,6 +34,14 @@ let totalCheese = 0
 let cheesePerClick = 1
 let cheesePerTurn = 0
 
+let totalPickaxe = 0
+let totalJackhammer = 0
+let totalCheeseMiner = 0
+let totalCheeseMiningFacility = 0
+
+let totalClickMiningBonus = 0
+let totalAutoMiningBonus = 0
+
 drawCheeseStats()
 
 
