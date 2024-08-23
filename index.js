@@ -95,6 +95,17 @@ function drawAutoStats() {
 }
 
 
+function shoppingCart() {
+  let price = 
+
+if (totalCheese > ) {
+
+  }
+
+}
+
+
+
 function reset() {
   totalCheese = 0
   cheesePerClick = 1
