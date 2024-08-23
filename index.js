@@ -43,6 +43,7 @@ function mineCheese() {
   drawCheeseStats()
 }
 
+
 function drawCheeseStats() {
   let cheeseElm = document.getElementById(`cheeseCard`)
 
@@ -51,5 +52,11 @@ function drawCheeseStats() {
 
   let cheesePerClickElm = cheeseElm.querySelector('.cheeseClick')
   cheesePerClickElm.innerHTML = `<span>Cheese per click: ${cheesePerClick}</span>`
+}
 
+function reset() {
+  totalCheese = 0
+  cheesePerClick = 1
+
+  drawCheeseStats()
 }
