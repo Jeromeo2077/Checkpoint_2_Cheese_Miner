@@ -40,9 +40,15 @@ let totalCheeseMiner = 0
 let totalCheeseMiningFacility = 0
 
 let totalClickMiningBonus = 0
+let totalPickaxeMiningBonus = 0
+let totalJackhammerMiningBonus = 0
 let totalAutoMiningBonus = 0
+let totalCheeseMinerMiningBonus = 0
+let totalCheeseMiningFacilityMiningBonus = 0
 
 drawCheeseStats()
+drawClickStats()
+drawAutoStats()
 
 
 function mineCheese() {
