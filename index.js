@@ -56,6 +56,7 @@ function mineCheese() {
   //console.log(`${totalCheese}`)
 
   drawCheeseStats()
+
 }
 
 
@@ -135,7 +136,7 @@ function clickShoppingCart(bonusItemName) {
 function calculateCheesePerClick() {
   cheesePerClick = totalPickaxeMiningBonus + totalJackhammerMiningBonus + 1
 
-  mineCheese()
+  drawCheeseStats()
 
 }
 
