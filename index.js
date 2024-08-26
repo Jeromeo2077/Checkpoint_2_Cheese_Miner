@@ -103,9 +103,9 @@ function clickShoppingCart(bonusItemName) {
   console.log("Successful Click", `${bonusItemName}`, `${totalClickMiningBonusPrice}`)
 
   if (totalCheese >= totalClickMiningBonusPrice) {
-    // console.log("Purchased", `${bonusItemName}`, `${totalClickMiningBonusPrice}`)
+    console.log("Purchased", `${bonusItemName}`, `${totalClickMiningBonusPrice}`)
     totalCheese -= totalClickMiningBonusPrice
-    // console.log("Total Cheese: ", `${totalCheese}`)
+    console.log("Total Cheese: ", `${totalCheese}`)
     drawCheeseStats()
 
     if (bonusItemName == 'Pickaxe') {
@@ -119,10 +119,41 @@ function clickShoppingCart(bonusItemName) {
     }
 
   } else {
-    // console.log("You don't have enough cheese!")
+    console.log("You don't have enough cheese!")
   }
 
-  // console.log(`${totalPickaxe}`, `${totalJackhammer}`)
+  console.log(`${totalPickaxe}`, `${totalJackhammer}`)
+
+}
+
+function autoShoppingCart(bonusItemName) {
+  let totalAutoMiningBonusName = automaticUpgrade.find((item) => item.name == bonusItemName)
+
+  let totalAutoMiningBonusPrice = totalAutoMiningBonusName.price
+
+  console.log("Successful Click", `${bonusItemName}`, `${totalAutoMiningBonusPrice}`)
+
+  if (totalCheese >= totalAutoMiningBonusPrice) {
+    console.log("Purchased", `${bonusItemName}`, `${totalAutoMiningBonusPrice}`)
+    totalCheese -= totalAutoMiningBonusPrice
+    console.log("Total Cheese: ", `${totalCheese}`)
+    drawCheeseStats()
+
+    if (bonusItemName == 'Cheese Miner') {
+      totalCheeseMiner++
+
+      drawAutoStats()
+    } else {
+
+      totalCheeseMiningFacility++
+      drawAutoStats()
+    }
+
+  } else {
+    console.log("You don't have enough cheese!")
+  }
+
+  console.log(`${totalCheeseMiner}`, `${totalCheeseMiningFacility}`)
 
 }
 
