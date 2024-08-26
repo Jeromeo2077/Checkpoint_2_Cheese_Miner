@@ -95,12 +95,29 @@ function drawAutoStats() {
 }
 
 
-function shoppingCart() {
-  let price = 
+function clickShoppingCart(bonusItemName) {
+  let totalClickMiningBonusName = clickUpgrade.find((item) => item.name == bonusItemName)
 
-if (totalCheese > ) {
+  let totalClickMiningBonusPrice = totalClickMiningBonusName.price
 
+  // console.log("Success", `${bonusItemName}`, `${totalClickMiningBonusPrice}`)
+
+  if (totalCheese >= totalClickMiningBonusPrice) {
+    console.log("Purchased", `${bonusItemName}`, `${totalClickMiningBonusPrice}`)
+    totalCheese -= totalClickMiningBonusPrice
+    console.log("Total Cheese: ", `${totalCheese}`)
+    drawCheeseStats()
+
+
+  } else {
+    console.log("You don't have enough cheese!")
   }
+
+  // let clickMiningBonusElm = document.getElementById(`clickUpgrades`)
+
+
+
+
 
 }
 
