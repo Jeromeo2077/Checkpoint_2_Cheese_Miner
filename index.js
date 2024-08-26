@@ -180,8 +180,13 @@ function calculateCheesePerTurn() {
   cheesePerTurn = totalCheeseMinerMiningBonus + totalCheeseMiningFacilityMiningBonus
 
   drawCheeseStats()
+  intervalCheeseMining()
 }
 
+function intervalCheeseMining() {
+  setInterval(totalCheese += cheesePerTurn, 3000);
+
+}
 
 
 function reset() {
