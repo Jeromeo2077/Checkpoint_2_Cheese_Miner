@@ -159,11 +159,13 @@ function autoShoppingCart(bonusItemName) {
       totalCheeseMinerMiningBonus = totalCheeseMiner * 7
 
       drawAutoStats()
+      calculateCheesePerTurn()
     } else {
 
       totalCheeseMiningFacility++
       totalCheeseMiningFacilityMiningBonus = totalCheeseMiningFacility * 15
       drawAutoStats()
+      calculateCheesePerTurn()
     }
 
   } else {
@@ -171,7 +173,13 @@ function autoShoppingCart(bonusItemName) {
   }
 
   console.log("Total Cheese Miner: ", `${totalCheeseMiner}`, " Total Cheese Mining Facility: ", `${totalCheeseMiningFacility}`)
+}
 
+function calculateCheesePerTurn() {
+
+  cheesePerTurn = totalCheeseMinerMiningBonus + totalCheeseMiningFacilityMiningBonus
+
+  drawCheeseStats()
 }
 
 
