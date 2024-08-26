@@ -97,9 +97,9 @@ function drawAutoStats() {
 
 
 function clickShoppingCart(bonusItemName) {
-  let totalClickMiningBonusName = clickUpgrade.find((item) => item.name == bonusItemName)
+  let item = clickUpgrade.find((item) => item.name == bonusItemName)
 
-  let totalClickMiningBonusPrice = totalClickMiningBonusName.price
+  let totalClickMiningBonusPrice = item.price
 
   console.log("Successful Click", `${bonusItemName}`, `${totalClickMiningBonusPrice}`)
 
@@ -112,6 +112,7 @@ function clickShoppingCart(bonusItemName) {
     if (bonusItemName == 'Pickaxe') {
       totalPickaxe++
       totalPickaxeMiningBonus = totalPickaxe * 1
+      item.price *= 1.03
 
       drawClickStats()
       calculateCheesePerClick()
@@ -119,6 +120,7 @@ function clickShoppingCart(bonusItemName) {
 
       totalJackhammer++
       totalJackhammerMiningBonus = totalJackhammer * 3
+      item.price *= 1.03
 
       drawClickStats()
       calculateCheesePerClick()
