@@ -80,7 +80,7 @@ function drawClickStats() {
   totalPickaxeElm.innerHTML = `<span>${totalPickaxe} x Pickaxe +${totalPickaxeMiningBonus}</span>`
 
   let totaljackhammerElm = clickStatsElm.querySelector('.totalJackhammer')
-  totaljackhammerElm.innerHTML = `<span> ${totalPickaxe} x Jackhammer +${totalJackhammerMiningBonus}</span>`
+  totaljackhammerElm.innerHTML = `<span> ${totalJackhammer} x Jackhammer +${totalJackhammerMiningBonus}</span>`
 }
 
 
@@ -103,21 +103,26 @@ function clickShoppingCart(bonusItemName) {
   // console.log("Success", `${bonusItemName}`, `${totalClickMiningBonusPrice}`)
 
   if (totalCheese >= totalClickMiningBonusPrice) {
-    console.log("Purchased", `${bonusItemName}`, `${totalClickMiningBonusPrice}`)
+    // console.log("Purchased", `${bonusItemName}`, `${totalClickMiningBonusPrice}`)
     totalCheese -= totalClickMiningBonusPrice
-    console.log("Total Cheese: ", `${totalCheese}`)
+    // console.log("Total Cheese: ", `${totalCheese}`)
     drawCheeseStats()
 
-
   } else {
-    console.log("You don't have enough cheese!")
+    // console.log("You don't have enough cheese!")
   }
 
-  // let clickMiningBonusElm = document.getElementById(`clickUpgrades`)
+  if (bonusItemName == 'Pickaxe') {
+    totalPickaxe++
 
+    drawClickStats()
+  } else {
 
+    totalJackhammer++
+    drawClickStats()
+  }
 
-
+  // console.log(`${totalPickaxe}`, `${totalJackhammer}`)
 
 }
 
