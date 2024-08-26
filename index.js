@@ -52,7 +52,7 @@ drawAutoStats()
 
 
 function mineCheese() {
-  totalCheese++
+  totalCheese += cheesePerClick
   //console.log(`${totalCheese}`)
 
   drawCheeseStats()
@@ -113,12 +113,14 @@ function clickShoppingCart(bonusItemName) {
       totalPickaxeMiningBonus = totalPickaxe * 1
 
       drawClickStats()
+      calculateCheesePerClick()
     } else {
 
       totalJackhammer++
       totalJackhammerMiningBonus = totalJackhammer * 3
 
       drawClickStats()
+      calculateCheesePerClick()
     }
 
   } else {
@@ -126,6 +128,15 @@ function clickShoppingCart(bonusItemName) {
   }
 
   console.log("Total Pickaxes: ", `${totalPickaxe}`, " Total Jackhammers: ", `${totalJackhammer}`)
+}
+
+
+
+function calculateCheesePerClick() {
+  cheesePerClick = totalPickaxeMiningBonus + totalJackhammerMiningBonus + 1
+
+  mineCheese()
+
 }
 
 
