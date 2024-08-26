@@ -184,7 +184,6 @@ function calculateCheesePerTurn() {
 }
 
 function intervalCheeseMining() {
-  setInterval(totalCheese += cheesePerTurn, 3000);
 
 }
 
@@ -195,3 +194,4 @@ function reset() {
 
   drawCheeseStats()
 }
+setInterval(() => totalCheese += cheesePerTurn, 3000);
