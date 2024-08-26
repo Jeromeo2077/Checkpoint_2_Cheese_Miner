@@ -178,12 +178,12 @@ function autoShoppingCart(bonusItemName) {
 function calculateCheesePerTurn() {
 
   cheesePerTurn = totalCheeseMinerMiningBonus + totalCheeseMiningFacilityMiningBonus
-
-  drawCheeseStats()
-  intervalCheeseMining()
 }
 
 function intervalCheeseMining() {
+  totalCheese += cheesePerTurn
+
+  drawCheeseStats()
 
 }
 
@@ -194,4 +194,5 @@ function reset() {
 
   drawCheeseStats()
 }
-setInterval(() => totalCheese += cheesePerTurn, 3000);
+
+setInterval(intervalCheeseMining, 3000);
