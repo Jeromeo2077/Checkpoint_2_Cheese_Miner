@@ -100,7 +100,7 @@ function clickShoppingCart(bonusItemName) {
 
   let totalClickMiningBonusPrice = totalClickMiningBonusName.price
 
-  // console.log("Success", `${bonusItemName}`, `${totalClickMiningBonusPrice}`)
+  console.log("Successful Click", `${bonusItemName}`, `${totalClickMiningBonusPrice}`)
 
   if (totalCheese >= totalClickMiningBonusPrice) {
     // console.log("Purchased", `${bonusItemName}`, `${totalClickMiningBonusPrice}`)
@@ -108,18 +108,18 @@ function clickShoppingCart(bonusItemName) {
     // console.log("Total Cheese: ", `${totalCheese}`)
     drawCheeseStats()
 
+    if (bonusItemName == 'Pickaxe') {
+      totalPickaxe++
+
+      drawClickStats()
+    } else {
+
+      totalJackhammer++
+      drawClickStats()
+    }
+
   } else {
     // console.log("You don't have enough cheese!")
-  }
-
-  if (bonusItemName == 'Pickaxe') {
-    totalPickaxe++
-
-    drawClickStats()
-  } else {
-
-    totalJackhammer++
-    drawClickStats()
   }
 
   // console.log(`${totalPickaxe}`, `${totalJackhammer}`)
